@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/WizardStone/ServerlessToken.git"
   },
-  "license": "MIT",
+  "license": "MIT-0",
   "author": "",
   "type": "commonjs",
   "main": "index.js",

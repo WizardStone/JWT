@@ -2,19 +2,20 @@
   "name": "tokens",
   "version": "1.0.0",
   "description": "A simple js algorithm for using JWT",
-  "homepage": "https://github.com/WizardStone/ServerlessToken#readme",
+  "homepage": "https://github.com/WizardStone/JWT#readme",
   "bugs": {
-    "url": "https://github.com/WizardStone/ServerlessToken/issues"
+    "url": "https://github.com/WizardStone/JWT/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WizardStone/ServerlessToken.git"
+    "url": "git+https://github.com/WizardStone/JWT.git"
   },
   "license": "MIT-0",
   "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   }
 }

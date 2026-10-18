@@ -4,7 +4,7 @@ const signature = require('./scr/signature.js');
 let data = {
     "username": "user001"
 }
-let EncryptionKey = "MyUser123";
+let TextData, base64Data, NewTextData, jsonObject;
 
 
 TextData = coder.JsonToText(data);

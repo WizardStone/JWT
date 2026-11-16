@@ -6,7 +6,6 @@ let data = {
 }
 let TextData, base64Data, NewTextData, jsonObject;
 
-
 TextData = coder.JsonToText(data);
 base64Data = coder.encode(TextData);
 
@@ -17,3 +16,11 @@ NewTextData = coder.decode(base64Data);
 jsonObject = coder.TextToJson(NewTextData);
 
 console.log(jsonObject);
+
+
+let secretKey = "test1234";
+let payload = [JSON.stringify(data), signature.generateSecret(JSON.stringify(data), secretKey)];
+
+let working = signature.verify(payload, secretKey);
+
+console.log("Payload is safe: " + working());

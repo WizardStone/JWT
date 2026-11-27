@@ -33,6 +33,16 @@ const JsonToText = (json) => JSON.stringify(json);
  */
 const TextToJson = (text) => JSON.parse(text);
 
+const ArrayDot = (array) => {
+    data = "";
+    for (let i = 0; i < array.length; i++){
+        data = data + "." + array[i];
+    }
+    return data;
+};
 
+const DotToArray = (dotString) => {
+    let array = dotString.split(".");
+}
 
 module.exports = {encode, decode, JsonToText, TextToJson};

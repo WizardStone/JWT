@@ -1,5 +1,5 @@
 {
-  "name": "tokens",
+  "name": "@wizardstone/jwt",
   "version": "1.0.0",
   "description": "A simple js algorithm for using JWT",
   "homepage": "https://github.com/WizardStone/JWT#readme",
@@ -11,11 +11,11 @@
     "url": "git+https://github.com/WizardStone/JWT.git"
   },
   "license": "MIT-0",
-  "author": "",
+  "author": "WizardStone",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node index.js",
     "dev": "node index.js"
   }
 }

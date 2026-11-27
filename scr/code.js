@@ -45,4 +45,4 @@ const DotToArray = (dotString) => {
     let array = dotString.split(".");
 }
 
-module.exports = {encode, decode, JsonToText, TextToJson};
+module.exports = {encode, decode, JsonToText, TextToJson, DotToArray, ArrayDot};

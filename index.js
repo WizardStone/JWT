@@ -1,6 +1,6 @@
 const coder = require('./scr/code.js');
 const signature = require('./scr/signature.js');
-
+/*
 let data = {
     "username": "user001"
 }
@@ -24,3 +24,16 @@ let payload = [JSON.stringify(data), signature.generateSecret(JSON.stringify(dat
 let working = signature.verify(payload, secretKey);
 
 console.log("Payload is safe: " + working());
+*/
+
+
+// Module Export/Import Fuunctions
+
+const sign = (JsonData, key) => {
+    let signedData = signature.generateSecret(coder.JsonToText(JsonData), key);
+    return coder.ArrayDot([coder.encode(coder.JsonToText(JsonData)), coder.encode(signedData)])
+}
+const verify = (Payload, key) =>{
+    let array = coder.DotToArray(Payload);
+    
+}

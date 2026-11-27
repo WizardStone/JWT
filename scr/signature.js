@@ -41,14 +41,14 @@ function NotTampered(payload, signature, secretKey){
 /**
  * Verifies whether the payload has been tampered with.
  * Done by comparing the provided signature with a newly generated signature using the same secret key.
- * @param {Array} Body An array containing the payload and its corresponding signature for verification.
+ * @param {Array} array An array containing the payload and its corresponding signature for verification.
  * @param {String} secretKey The secret key used for signing data using HMAC SHA356 Encryption.
  * @returns {Boolean} Returns true if the payload is safe and has not been tampered with, if it has been modified returns false.
  */
 
-function verify(Body, secretKey){
-    const payload = Body[0];
-    const signature = Body[1];
+function verify(array, secretKey){
+    const payload = array[0];
+    const signature = array[1];
     return NotTampered(payload, signature, secretKey);
 }
 module.exports = {generateSecret, verify}

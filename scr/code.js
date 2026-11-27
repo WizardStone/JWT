@@ -18,6 +18,12 @@ const encode = (stringVal) =>  Buffer.from(stringVal, 'utf8').toString('base64ur
  */
 const decode = (base64Val) =>  Buffer.from(base64Val, 'base64url').toString('utf8');
 
+const DecodeInArrayForm = (array) => {
+    for (let i = 0; i < array.length; i++){
+       array[i] = decode(array[i]);
+    }
+    return array
+}
 
 /**
  * Converts a json object to a plain string
@@ -34,15 +40,16 @@ const JsonToText = (json) => JSON.stringify(json);
 const TextToJson = (text) => JSON.parse(text);
 
 const ArrayDot = (array) => {
-    data = "";
-    for (let i = 0; i < array.length; i++){
+    data = array[0];
+    for (let i = 1; i < array.length; i++){
         data = data + "." + array[i];
     }
     return data;
 };
 
 const DotToArray = (dotString) => {
-    let array = dotString.split(".");
+    const array = dotString.split(".");
+    return array;
 }
 
-module.exports = {encode, decode, JsonToText, TextToJson, DotToArray, ArrayDot};
+module.exports = {encode, decode, DecodeInArrayForm, JsonToText, TextToJson, DotToArray, ArrayDot};
